@@ -1,0 +1,19 @@
+
+#aEffectuer{
+    background-color: rgb(195, 148, 214);
+}
+
+#effectuee{
+    background-color: red;
+
+    height: 100px;
+}
+
+li{
+    display: inline;
+}
+
+.material-icons{
+    background-color: blue;
+    cursor: pointer;
+}
