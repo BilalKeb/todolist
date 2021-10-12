@@ -17,3 +17,6 @@ li{
     background-color: blue;
     cursor: pointer;
 }
+.container {
+    border : 1px solid gray
+}
