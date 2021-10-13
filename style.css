@@ -27,7 +27,7 @@ grid-template-rows:  ; */
 .material-icons{
     background-color: blue;
     cursor: pointer;
-}
+} 
 .container {
     border : 1px solid gray;
     background-color: #c5c3c5;
@@ -42,5 +42,5 @@ grid-template-rows:  ; */
 
 .btn {
 border-radius: 20px;
- ;
+ 
 }

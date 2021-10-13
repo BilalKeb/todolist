@@ -9,43 +9,28 @@
     <title>Todolist</title>
 </head>
 <body>
-    <div class="bloc1"></div>
-    <div id="nom-tableau">
-        La Todolist
-    </div>
-    <div class="bloc2"></div>
     <div class="container">
-        
-        <div id="div_boutons">
-            
+        <div id="nom-tableau">
+            Todolist
         </div>
-        <div id="div_listes">
-            <div id="formulaire">
-                <form onsubmit="onTaskSubmit(); return false;">
-                    <input type="text" id="tache" name=""><br>
-                    <!-- <input type="submit" value="submit" onclick="onSubmitClick()" /> -->
-                    <button class="btn">Submit</button>
-                </form>
-            </div>
-            <div id="list-taches">
-                <ul id="ul-taches">
-                </ul>
-            </div>
-            <div id="list-done">
-                <ul>
-                    <li>Test</li>
-                    <li>Test</li>
-                </ul>
-            </div>
+        <div id="formulaire">
+            <form onsubmit="onTaskSubmit(); return false;">
+                <input type="text" id="tache" name=""><br>
+                <!-- <input type="submit" value="submit" onclick="onSubmitClick()" /> -->
+                <button class="btn">Submit</button>
+            </form>
         </div>
-        <div class="bloc3"></div>
+        <div id="list-taches">
+        </div>
+        <div id="list-done">
+            <ul>
+                <li>Test</li>
+                <li>Test</li>
+            </ul>
+        </div>
         <div id="div_pubs">
         </div>
-        <div class="bloc4"></div>
-        <div class="bloc5"></div>
-        <div class="bloc6"></div>
     </div>
-    <div class="bloc4"></div>
     <script src="index.js"></script>
 </body>
 </html>
