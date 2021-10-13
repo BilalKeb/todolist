@@ -7,23 +7,28 @@ var objetTaches = [
     status: todo}
 ]
 
-//afficher taches
-function affichertaches(objet) {
-    var balise = document.createElement("li")
-    var text = document.createTextNode(objet.value)
-    balise.appendChild(text)
-    var element = document.getElementById("ul-taches")
-    element.appendChild(balise)
-}
-
+//afficher le tableau des taches
 objetTaches.forEach(function(item) {
-    affichertaches(item)
+    var test = `<div> ${item.value} </div>`
+    document.getElementById("list-taches").innerHTML = test + `<div> ${item.value} </div>`
 })
+function onClickDelete(objet) {
+    
+}
+//afficher tache
+function affichertache(objet) {
+    // document.getElementById("list-taches").innerHTML = `<div> ${objet.value} </div>`
+    // var balise = document.createElement("div")
+    // var text = document.createTextNode(objet.value)
+    // balise.appendChild(text)
+    // var element = document.getElementById("list-taches")
+    // element.appendChild(balise)
+}
 
 //ajouter taches
 function ajouterTache(tache) {
     objetTaches.push({value: tache, status: todo})
-    affichertaches({value: tache, status: todo}) 
+    affichertache({value: tache, status: todo}) 
     console.log(objetTaches);
 }
 function onTaskSubmit() {
