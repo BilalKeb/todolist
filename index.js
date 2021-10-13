@@ -29,4 +29,6 @@ function ajouterTache(tache) {
 function onTaskSubmit() {
     var tache = document.getElementById('tache').value;
     ajouterTache(tache)
+    alert('c bn')
 }
+

@@ -5,32 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <title>Todolist</title>
 </head>
 <body>
-    <div class="container">
-        <div id="nom-tableau">
-            Todolist
-        </div>
-        <div id="list-taches">
-            <ul id="ul-taches">
-            </ul>
-        </div>
-        <div id="list-done">
-            <ul>
-                <li>Test</li>
-                <li>Test</li>
-            </ul>
-        </div>
-        <div id="formulaire">
-            <form onsubmit="onTaskSubmit(); return false;">
-                <input type="text" id="tache" name=""><br>
-                <!-- <input type="submit" value="submit" onclick="onSubmitClick()" /> -->
-                <button>Submit</button>
-            </form>
-        </div>
+    <div class="bloc1"></div>
+    <div id="nom-tableau">
+        La Todolist
     </div>
+    <div class="bloc2"></div>
+    <div class="container">
+        
+        <div id="div_boutons">
+            
+        </div>
+        <div id="div_listes">
+            <div id="formulaire">
+                <form onsubmit="onTaskSubmit(); return false;">
+                    <input type="text" id="tache" name=""><br>
+                    <!-- <input type="submit" value="submit" onclick="onSubmitClick()" /> -->
+                    <button class="btn">Submit</button>
+                </form>
+            </div>
+            <div id="list-taches">
+                <ul id="ul-taches">
+                </ul>
+            </div>
+            <div id="list-done">
+                <ul>
+                    <li>Test</li>
+                    <li>Test</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bloc3"></div>
+        <div id="div_pubs">
+        </div>
+        <div class="bloc4"></div>
+        <div class="bloc5"></div>
+        <div class="bloc6"></div>
+    </div>
+    <div class="bloc4"></div>
     <script src="index.js"></script>
 </body>
 </html>

@@ -1,22 +1,46 @@
 
-#aEffectuer{
-    background-color: rgb(195, 148, 214);
+
+.btn{
+    background-color: aquamarine;
+    box-shadow: black;
+    border-radius: 20px;
 }
 
-#effectuee{
-    background-color: red;
+#tache {
 
-    height: 100px;
+    border-radius: 20px;
 }
 
-li{
-    display: inline;
-}
+/* body {
+     */
+/* margin: 0;
+min-height: 100vh;
+display: grid;
+grid-template-columns: 1fr 1fr ;
+grid-template-rows:  ; */
+
+
+/* } */
+
+
 
 .material-icons{
     background-color: blue;
     cursor: pointer;
 }
 .container {
-    border : 1px solid gray
+    border : 1px solid gray;
+    background-color: #c5c3c5;
+}
+#nom-tableau{
+    background-color: #da4042 ;
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.btn {
+border-radius: 20px;
+ ;
 }
