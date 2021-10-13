@@ -1,8 +1,8 @@
 var objetTaches = [
-    // {value : "Nettoyer la cuisine", 
-    // status: "To do"},
-    // {value : "Faire le ménage", 
-    // status: "To do"}
+    {value : "Nettoyer la cuisine", 
+    status: "To do"},
+    {value : "Faire le ménage", 
+    status: "Done"}
 ]
 var list_taches = document.getElementById('list-taches')
 var index = 0
@@ -63,3 +63,29 @@ function clearcontent(elementID) {
 //     input.value;document.getElgetElementsByClassName('container').appendChild(leFormulaire);
 //     alert('modifier');
 // }
+
+function filterTache(status) {
+    console.log(status);
+
+    var filterTaches = objetTaches.filter(function(objetTache){
+        return objetTache.status === status;
+    })
+
+    return filterTaches
+}
+
+console.log(filterTache("Done"))
+console.log(filterTache("To do"))
+console.log(filterTache("Doing"))
+
+// function filterTache(status, array) {
+//     return array.filter(function(element) {
+//         return element.status === status;
+//     })
+// };
+
+// console.log(filterTache("Done", objetTaches))
+// console.log(filterTache("To do", objetTaches))
+// console.log(filterTache("Doing", objetTaches))
+
+// ,
