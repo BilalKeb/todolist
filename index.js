@@ -1,42 +1,37 @@
 var objetTaches = [
-    {value : "Nettoyer la cuisine", 
-    status: "To do"},
-    {value : "Faire le ménage", 
-    status: "To do"}
+    // {value : "Nettoyer la cuisine", 
+    // status: "To do"},
+    // {value : "Faire le ménage", 
+    // status: "To do"}
 ]
-var list_taches = ""
+var list_taches = document.getElementById('list-taches')
+var index = 0
 
 function affichertableau(objet) {
-    // clearcontent('list-taches')
+    clearcontent('list-taches')
     objet.forEach(function(item) {
-        affichertache(item)
+        index = objet.indexOf(item)
+        list_taches.innerHTML = list_taches.innerHTML + `<div> ${item.value} ${item.status}</div> 
+        <button onClick="onClickDelete('${index}')">X</button>`
     })
 }
+console.log(objetTaches)
 affichertableau(objetTaches)
 
-//afficher taches
-function affichertache(objet) {
-    list_taches = list_taches + `<div> ${objet.value} ${objet.status}</div> <button onClick="onClickDelete('${objet.value}')">X</button>`
-    document.getElementById('list-taches').innerHTML = list_taches
-}
 //ajouter taches dans l'objetTaches
 function ajouterTache(tache) {
     objetTaches.push({value: tache, status: "To do"})
-    affichertache({value: tache, status: "To do"}) 
-    console.log(objetTaches);
+    affichertableau(objetTaches)
 }
 //ajouter tache
 function onTaskSubmit() {
-    var tache = document.getElementById('tache').value;
+    var tache = document.getElementById('tache').value
     ajouterTache(tache)
 }
 //supprimer tache
-function onClickDelete(tache) {
-    var newObjet = objetTaches.filter(function(newTache) {
-        return newTache.value !== tache       
-    })
-    console.log(newObjet)
-    affichertableau(newObjet)
+function onClickDelete(index) {
+    objetTaches.splice(index, 1)
+    affichertableau(objetTaches)
 }
 function clearcontent(elementID) {
     document.getElementById(elementID).innerHTML = ""
