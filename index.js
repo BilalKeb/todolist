@@ -31,6 +31,7 @@ function affichertableau(objet) {
 }
 console.log(objetTaches)
 affichertableau(objetTaches)
+afficherPriority(objetTaches)
 
 //ajouter tache
 function onTaskSubmit() {
@@ -109,16 +110,30 @@ function ajouterTache(tache) {
 function afficherPriority(objet) {
     objet.forEach(function(item) {
         for (var i = 1; i <= item.priority; i++) {
-            prior[objet.indexOf(item)].innerHTML = prior[objet.indexOf(item)].innerHTML + `<i class="fas fa-star"></i>`
-            console.log(item.priority + item.value);
-            console.log(i + " i");
+            prior[objet.indexOf(item)].innerHTML = prior[objet.indexOf(item)].innerHTML + `<a href="" class="starmoins"><i class="fas fa-star"></i></a>`
+            // console.log(item.priority + item.value);
+            // console.log(i + " i");
 
             if (i === item.priority) {
                 for (var j = i; j < 5; j++) {
-                    prior[objet.indexOf(item)].innerHTML = prior[objet.indexOf(item)].innerHTML + `<i class="far fa-star"></i>`
+                    prior[objet.indexOf(item)].innerHTML = prior[objet.indexOf(item)].innerHTML + `<a href="" class="starplus"><i class="far fa-star"></i></a>`
                 }
             }
         }
     });
 }
-afficherPriority(objetTaches)
+//Trier priority
+function Trier(tri) {
+    if (tri === "max") {
+        var arrayTri = objetTaches.sort(function (a, b) {
+            return b.priority - a.priority
+        })
+    }
+    if (tri === "min") {
+        var arrayTri = objetTaches.sort(function (a, b) {
+            return a.priority - b.priority
+        })
+    }
+    affichertableau(arrayTri)
+    afficherPriority(arrayTri)
+}
