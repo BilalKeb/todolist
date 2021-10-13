@@ -4,6 +4,13 @@
     justify-content:center;
 
 }
+
+.btn1{
+border-radius: 30px;
+background-color: khaki;
+
+
+}
 .btn{
     background-color: rgb(255, 127, 212);
     box-shadow: black;
