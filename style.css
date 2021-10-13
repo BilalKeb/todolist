@@ -4,6 +4,10 @@
     justify-content:center;
 
 }
+.btnRandom {
+    background-color: lawngreen;
+    border-radius: 30px;
+}
 
 .btn1{
 border-radius: 30px;
