@@ -68,3 +68,19 @@ function filterTache(status) {
     return filterTaches
 }
 
+
+function addTaskRandom() {
+    var min = 1;
+    var max = 3;
+    var random = Math.floor(Math.random() * (max - min + 1) + min)
+    console.log(random);
+    list_taches.innerHTML = list_taches.innerHTML + `
+        <div class="task-element">
+            <button onClick="formModify('${random}', ${index})"> Modifier </button>
+            <div id="${random}"> ${random} ${item.status}</div> 
+            <button onClick="onClickDelete('${index}')">X</button>
+        </div>
+        `
+    
+    // ajouterTache(random)
+}
