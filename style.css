@@ -1,27 +1,45 @@
-
+body{
+    font-family:  Papyrus, sans-serif;
+    margin: 0;
+}
 .formad{
     display: flex;
     justify-content:center;
 
 }
+
+#formulaire{
+    margin: 20px 0px;
+}
 .btnRandom {
-    background-color: lawngreen;
-    border-radius: 30px;
+    background-color: salmon;
+    border-radius: 10px;
+    padding:10px;
+    width:100px;
+    
 }
 
 .btn1{
-border-radius: 30px;
-background-color: khaki;
-
-
+    border-radius: 30px;
+    background-color: rgb(245, 48, 123);
+    border: none;
+    padding: 0px 30px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-size: 24px;
 }
 .filtre {
     text-align: center;
 }
 .btn{
-    background-color: rgb(255, 127, 212);
-    box-shadow: black;
-    border-radius: 20px;
+    background-color: rgb(236, 236, 236);
+    box-shadow: 2px 2px 5px 3px red;
+    border-radius: 13px;
+    margin: 10px 10px;
+    padding: 7px;
+    width: 100px;
+    cursor: pointer;
 }
 .task-element  {
     display:flex;
@@ -30,8 +48,14 @@ background-color: khaki;
 }
 
 #tache {
-
+    padding: 8px;
+    border: none;
     border-radius: 20px;
+    margin-right: 20px;
+    outline-width: 0;
+    font-size: 18px;
+    width: 30%;
+    text-align: center;
 }
 
 /* body {
@@ -63,7 +87,6 @@ grid-template-rows:  ; */
     text-align: center;
 }
 
-.btn {
-border-radius: 20px;
- 
+.container{
+    height: 100vh;
 }
