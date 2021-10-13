@@ -18,10 +18,13 @@
                 <input type="text" id="tache" name=""><br>
                 <button class="btn1">Submit</button>
             </form>
-                <button class="btn">To Do</button>
-                <button class="btn">Doing</button>
-                <button class="btn">Done</button>
-                <buttonc class="btnRandom"></buttonc>
+        </div>
+        <div class="filtre">
+            <button class="btn" onclick="filterAll()">All</button>
+            <button class="btn" onclick="filterTache('To do')">To Do</button>
+            <button class="btn" onclick="filterTache('Doing')">Doing</button>
+            <button class="btn" onclick="filterTache('Done')">Done</button>
+            <button class="btn" >Random</button>
         </div>
         <div id="list-taches">
         </div>

@@ -11,10 +11,12 @@ background-color: khaki;
 
 
 }
+.filtre {
+    text-align: center;
+}
 .btn{
     background-color: rgb(255, 127, 212);
     box-shadow: black;
-    
     border-radius: 20px;
 }
 .task-element  {

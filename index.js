@@ -58,13 +58,17 @@ function onModify(index) { //modifier la valeur
     objetTaches[index].value = tache_mod
     affichertableau(objetTaches)
 }
+
+//filtrer
 function filterTache(status) {
-    console.log(status);
-
     var filterTaches = objetTaches.filter(function(objetTache){
-        return objetTache.status === status;
+        return objetTache.status === status
     })
+    affichertableau(filterTaches)
+}
 
-    return filterTaches
+//bouton all pour re afficher
+function filterAll() {
+    affichertableau(objetTaches)
 }
 
