@@ -1,9 +1,19 @@
 
+.formad{
+    display: flex;
+    justify-content:center;
 
+}
 .btn{
-    background-color: aquamarine;
+    background-color: rgb(255, 127, 212);
     box-shadow: black;
+    
     border-radius: 20px;
+}
+.task-element  {
+    display:flex;
+    justify-content:space-between;
+
 }
 
 #tache {

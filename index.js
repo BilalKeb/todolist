@@ -18,6 +18,18 @@ function affichertableau(objet) {
 console.log(objetTaches)
 affichertableau(objetTaches)
 
+//afficher taches
+// function affichertache(objet) {
+//     list_taches = list_taches + `
+//         <div class="task-element"> 
+//             <button onClick="onModify(''${objet.value}'"> Modifier </button>
+//             <div> ${objet.value} ${objet.status}</div>
+//             <button onClick="onClickDelete('${objet.value}')">X</button>
+//         </div>
+//     `
+                                 
+//     document.getElementById('list-taches').innerHTML = list_taches
+// }
 //ajouter taches dans l'objetTaches
 function ajouterTache(tache) {
     objetTaches.push({value: tache, status: "To do"})
@@ -36,3 +48,18 @@ function onClickDelete(index) {
 function clearcontent(elementID) {
     document.getElementById(elementID).innerHTML = ""
 }
+
+
+
+// function onModify(tache_a_modifier){
+//     var input=document.getElementById('tache');
+//     var leFormulaire=`<div id="formulaireModifier">
+//                           <form class="formModifier"  onsubmit="onTaskSubmit();">
+//                               <input type="text" id="tacheModifier" value="${tache_a_modifier}" name=""><br>
+//                               <input type="submit" value="submit" onclick="onModify()" />
+//                               <button class="btn">Submit</button>
+//                           </form>
+//         </div>`
+//     input.value;document.getElgetElementsByClassName('container').appendChild(leFormulaire);
+//     alert('modifier');
+// }
