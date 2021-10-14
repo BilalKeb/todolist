@@ -29,6 +29,15 @@ body{
     font-weight: 500;
     font-size: 24px;
 }
+.starplus:hover{
+    background-image: url('img/star-solid.svg')
+}
+.starplus, .starmoins{
+    color: black;
+}
+.starmoins:hover{
+    background-image: url('img/star-regular.svg')
+}
 .filtre {
     text-align: center;
 }
