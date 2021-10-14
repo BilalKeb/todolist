@@ -72,6 +72,9 @@ body{
 #list-taches {
     color: white;
 }
+.tachecss{
+    width: 50%;
+}
 input#tache {
     padding: 8px;
     border: none;

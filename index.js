@@ -27,7 +27,7 @@ function affichertableau(objet) {
         index = objet.indexOf(item)
         list_taches.innerHTML = list_taches.innerHTML + `
             <div class="task-element">
-                <div id="${item.value}"> ${item.value}</div> 
+                <div class="tachecss" id="${item.value}"> ${item.value}</div> 
                 <div id="status">${item.status}</div> 
                 <div class="priority"></div> 
                 <button id="modifier" class="btn" onClick="formModify('${item.value}', ${index}, ${item.priority})">Modifier</button>
@@ -68,22 +68,23 @@ function formModify(tache_a_modifier, index, num_prior) { //faire apparaître le
     document.getElementById(tache_a_modifier).innerHTML = `
             <input type="text" id="tacheModifier" value="${tache_a_modifier}" name=""> 
             <input type="submit" value="valider" onclick="onModify(${index})"/>
-
-                
         `      
-    document.getElementById("status").innerHTML= `                <SELECT id="liste-deroulante" NAME="Liste">
-    <OPTION VALUE="">Vide
-    <OPTION VALUE="To do">To do
-    <OPTION VALUE="Done">Done
-    <OPTION VALUE="Doing">Doing
-</SELECT>`
+    document.getElementById("status").innerHTML= `<SELECT id="liste-deroulante2" NAME="Liste">
+                                                    <OPTION VALUE="">Vide
+                                                    <OPTION VALUE="To do">To do
+                                                    <OPTION VALUE="Done">Done
+                                                    <OPTION VALUE="Doing">Doing
+                                                </SELECT>`
     prior[index].innerHTML = `<input type="number" id="priorModifier" value="${num_prior}" min="0" max="5"> `
 }
 function onModify(index) { //modifier la valeur
     var tache_mod = document.getElementById('tacheModifier').value
     var prior_mod = document.getElementById('priorModifier').value
+    var status_mod = document.getElementById('liste-deroulante2').value
+    console.log(status_mod);
     objetTaches[index].value = tache_mod
     objetTaches[index].priority = Number(prior_mod)
+    objetTaches[index].status = status_mod
     affichertableau(objetTaches)
     afficherPriority(objetTaches)
 }
@@ -158,12 +159,10 @@ function Trier(tri) {
     afficherPriority(arrayTri)
 }
 //mouseoverstar
-// function mouseoverstar(priority, index, mousestar) {
-//     console.log(mousestar);
-//     for (var i = mousestar; i >= priority; i--) {
-//         starChoice[index].setAttribute("style","background-image: url('img/star-solid.svg')");
+function mouseoverstar(priority, index, mousestar) {
+    // console.log(mousestar);
+    // for (var i = mousestar; i >= priority; i--) {
+    //     starChoice[index].setAttribute("style","background-image: url('img/star-solid.svg')");
 
-//     }
-    
-
-// }
+    // }
+}
