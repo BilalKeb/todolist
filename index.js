@@ -7,7 +7,13 @@ var objetTaches = [
     priority: 4},
     {value : "Jouer à la console", 
     status: "Doing",
-    priority: 5}
+    priority: 5},
+    {value : "Ranger la cave", 
+    status: "To do",
+    priority: 5},
+    {value : "m'occuper de ma femme", 
+    status: "Done",
+    priority: 5}    
 ]
 var list_taches = document.getElementById('list-taches')
 var prior = document.getElementsByClassName('priority')
@@ -37,7 +43,9 @@ afficherPriority(objetTaches)
 function onTaskSubmit() {
     var tache = document.getElementById('tache').value
     var num = document.getElementById('priority').value
-    objetTaches.push({value: tache, status: "To do", priority: num})
+    var choixListe = document.getElementById('liste-deroulante').value
+    console.log(choixListe)
+    objetTaches.push({value: tache, status: choixListe, priority: num})
     affichertableau(objetTaches)
     afficherPriority(objetTaches)
 }
@@ -89,7 +97,7 @@ function filterAll() {
 //random
 function addTaskRandom() {
     var min = 0
-    var max = objetTaches.length
+    var max = objetTaches.length - 1
 
     var random = Math.floor(Math.random() * (max - min + 1) + min)
     // console.log(random);
@@ -101,7 +109,7 @@ function ajouterTache(tache) {
     var max = 5
     var random = Math.floor(Math.random() * (max - min + 1) + min)
 
-    objetTaches.push({value: tache, status: "To do", priority: random})
+    objetTaches.push({value: tache, status: "", priority: random})
     affichertableau(objetTaches)
     afficherPriority(objetTaches)
 }
