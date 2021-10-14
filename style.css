@@ -86,3 +86,6 @@ input#tache {
 #priority, #liste-deroulante {
     margin: 0 10px;
 }
+.priority {
+    width: 120px;
+}
