@@ -11,6 +11,7 @@ var objetTaches = [
 ]
 var list_taches = document.getElementById('list-taches')
 var prior = document.getElementsByClassName('priority')
+var starChoice = document.getElementsByClassName('starplus')
 var index = 0
 
 //afficher le tableau des taches
@@ -110,13 +111,16 @@ function ajouterTache(tache) {
 function afficherPriority(objet) {
     objet.forEach(function(item) {
         for (var i = 1; i <= item.priority; i++) {
-            prior[objet.indexOf(item)].innerHTML = prior[objet.indexOf(item)].innerHTML + `<a href="" class="starmoins"><i class="fas fa-star"></i></a>`
-            // console.log(item.priority + item.value);
-            // console.log(i + " i");
-
+            prior[objet.indexOf(item)].innerHTML = prior[objet.indexOf(item)].innerHTML + `
+                                                    <a href="" onmouseover="mouseoverstar(${item.priority}, ${objet.indexOf(item)}, ${i})" value="${i}" class="starmoins">
+                                                    <i class="fas fa-star"></i></a>
+                                                `
             if (i === item.priority) {
                 for (var j = i; j < 5; j++) {
-                    prior[objet.indexOf(item)].innerHTML = prior[objet.indexOf(item)].innerHTML + `<a href="" class="starplus"><i class="far fa-star"></i></a>`
+                    prior[objet.indexOf(item)].innerHTML = prior[objet.indexOf(item)].innerHTML + `
+                                                            <a href="" onmouseover="mouseoverstar(${item.priority}, ${objet.indexOf(item)}, ${j + 1})" value="${j}" class="starplus">
+                                                            <i class="far fa-star"></i></a>
+                                                        `
                 }
             }
         }
@@ -137,3 +141,13 @@ function Trier(tri) {
     affichertableau(arrayTri)
     afficherPriority(arrayTri)
 }
+//mouseoverstar
+// function mouseoverstar(priority, index, mousestar) {
+//     console.log(mousestar);
+//     for (var i = mousestar; i >= priority; i--) {
+//         starChoice[index].setAttribute("style","background-image: url('img/star-solid.svg')");
+
+//     }
+    
+
+// }
