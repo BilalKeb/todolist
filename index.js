@@ -120,6 +120,7 @@ function ajouterTache(tache) {
     var random = Math.floor(Math.random() * (max - min + 1) + min)
 
     objetTaches.push({value: tache, status: "", priority: random})
+                                                
     affichertableau(objetTaches)
     afficherPriority(objetTaches)
 }
