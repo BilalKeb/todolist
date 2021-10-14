@@ -1,19 +1,19 @@
 var objetTaches = [
-    {value : "Nettoyer la cuisine", 
+    {value : "Apprendre le CSS Bilal.", 
     status: "To do",
     priority: 1},
-    {value : "Faire le ménage", 
-    status: "Done",
-    priority: 4},
-    {value : "Jouer à la console", 
+    {value : "Empêcher Benoit de kicker tout le monde.", 
     status: "Doing",
-    priority: 5},
-    {value : "Ranger la cave", 
+    priority: 4},
+    {value : "Arrêter de spamer le prof.", 
+    status: "Doing",
+    priority: 2},
+    {value : "Venir à l'heure Rebecca.", 
     status: "To do",
     priority: 5},
-    {value : "m'occuper de ma femme", 
+    {value : "Arrêter d'être BG Vincent.", 
     status: "Done",
-    priority: 5}    
+    priority: 3}    
 ]
 var list_taches = document.getElementById('list-taches')
 var prior = document.getElementsByClassName('priority')
@@ -119,7 +119,7 @@ function ajouterTache(tache) {
     var max = 5
     var random = Math.floor(Math.random() * (max - min + 1) + min)
 
-    objetTaches.push({value: tache, status: "", priority: random})
+    objetTaches.push({value: tache, status: "To do", priority: random})
     affichertableau(objetTaches)
     afficherPriority(objetTaches)
 }
