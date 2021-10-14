@@ -29,7 +29,7 @@ function affichertableau(objet) {
             <div class="task-element">
                 <button onClick="formModify('${item.value}', ${index}, ${item.priority})">Modifier</button>
                 <div id="${item.value}"> ${item.value}</div> 
-                <div class="status">${item.status}</div> 
+                <div id="status">${item.status}</div> 
                 <div class="priority"></div> 
                 <button onClick="onClickDelete('${index}')">Supprimer</button>
             </div>
@@ -67,8 +67,16 @@ function clearcontent(elementID) {
 function formModify(tache_a_modifier, index, num_prior) { //faire apparaître le champs de texte
     document.getElementById(tache_a_modifier).innerHTML = `
             <input type="text" id="tacheModifier" value="${tache_a_modifier}" name=""> 
-            <input type="submit" value="valider" onclick="onModify(${index})" />
-        ` 
+            <input type="submit" value="valider" onclick="onModify(${index})"/>
+
+                
+        `      
+    document.getElementById("status").innerHTML= `                <SELECT id="liste-deroulante" NAME="Liste">
+    <OPTION VALUE="">Vide
+    <OPTION VALUE="To do">To do
+    <OPTION VALUE="Done">Done
+    <OPTION VALUE="Doing">Doing
+</SELECT>`
     prior[index].innerHTML = `<input type="number" id="priorModifier" value="${num_prior}" min="0" max="5"> `
 }
 function onModify(index) { //modifier la valeur
