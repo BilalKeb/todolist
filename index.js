@@ -66,7 +66,7 @@ function onModify(index) { //modifier la valeur
     var tache_mod = document.getElementById('tacheModifier').value
     var prior_mod = document.getElementById('priorModifier').value
     objetTaches[index].value = tache_mod
-    objetTaches[index].priority = prior_mod
+    objetTaches[index].priority = Number(prior_mod)
     affichertableau(objetTaches)
     afficherPriority(objetTaches)
 }
