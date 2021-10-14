@@ -1,101 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
 body{
-    font-family:  Papyrus, sans-serif;
+    font-family: 'Architects Daughter', cursive;
     margin: 0;
-}
-.formad{
-    display: flex;
-    justify-content:center;
-
-}
-
-#formulaire{
-    margin: 20px 0px;
-}
-.btnRandom {
-    background-color: salmon;
-    border-radius: 10px;
-    padding:10px;
-    width:100px;
-    
-}
-
-.btn1{
-    border-radius: 30px;
-    background-color: rgb(245, 48, 123);
-    border: none;
-    padding: 0px 30px;
-    cursor: pointer;
-    color: white;
-    font-weight: 500;
-    font-size: 24px;
-}
-.starplus:hover{
-    background-image: url('img/star-solid.svg')
-}
-.starplus, .starmoins{
-    color: black;
-}
-.starmoins:hover{
-    background-image: url('img/star-regular.svg')
-}
-.filtre {
-    text-align: center;
-}
-.btn{
-    background-color: rgb(236, 236, 236);
-    box-shadow: 2px 2px 5px 3px red;
-    border-radius: 13px;
-    margin: 10px 10px;
-    padding: 7px;
-    width: 100px;
-    cursor: pointer;
-}
-.task-element  {
-    display:flex;
-    justify-content:space-between;
-
-}
-
-#tache {
-    padding: 8px;
-    border: none;
-    border-radius: 20px;
-    margin-right: 20px;
-    outline-width: 0;
-    font-size: 18px;
-    width: 30%;
-    text-align: center;
-}
-
-/* body {
-     */
-/* margin: 0;
-min-height: 100vh;
-display: grid;
-grid-template-columns: 1fr 1fr ;
-grid-template-rows:  ; */
-
-
-/* } */
-
-
-
-.material-icons{
-    background-color: blue;
-    cursor: pointer;
-} 
-.container {
-    border : 1px solid gray;
-    background-color: #c5c3c5;
+    color :#1E0F1C;
+    background-color: #955149;
 }
 #nom-tableau{
-    background-color: #da4042 ;
+    background-color: #A7001E;
     padding: 20px;
     color: white;
     font-size: 30px;
     text-align: center;
 }
-
-.container{
-    height: 100vh;
+.container {
+    width: 996px;
+    margin: auto;
+    padding: 10px;
+}
+.format{
+    display: flex;
+    justify-content:center;
+    margin: 20px;
+}
+.btnRandom {
+    font-family: 'Architects Daughter', cursive;
+    border-radius: 30px;
+    background-color: #7AA95C;
+    border: none;
+    padding: 0px 30px;
+    color: white;
+    font-size: 24px;;
+}
+.btnAjouter{
+    font-family: 'Architects Daughter', cursive;
+    border-radius: 30px;
+    background-color: #A7001E;
+    border: none;
+    padding: 0px 30px;
+    color: white;
+    font-size: 24px;
+}
+.btn{
+    background-color: #A7001E;
+    border-radius: 13px;
+    border: none;
+    margin: 10px 10px;
+    padding: 7px;
+    width: 100px;
+    color: white;
+    font-family: 'Architects Daughter', cursive;
+}
+.starplus:hover{
+    /* background-image: url('img/star-solid.svg') */
+}
+.starplus, .starmoins{
+    color: white;
+}
+.starmoins:hover{
+    /* background-image: url('img/star-regular.svg'); */
+}
+.filtre {
+    text-align: center;
+}
+.task-element  {
+    display:flex;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+#list-taches {
+    color: white;
+}
+input#tache {
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    width: 30%;
+    margin: 0 10px;
+}
+#priority, #liste-deroulante {
+    margin: 0 10px;
 }

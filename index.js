@@ -27,11 +27,11 @@ function affichertableau(objet) {
         index = objet.indexOf(item)
         list_taches.innerHTML = list_taches.innerHTML + `
             <div class="task-element">
-                <button onClick="formModify('${item.value}', ${index}, ${item.priority})">Modifier</button>
                 <div id="${item.value}"> ${item.value}</div> 
                 <div id="status">${item.status}</div> 
                 <div class="priority"></div> 
-                <button onClick="onClickDelete('${index}')">Supprimer</button>
+                <button id="modifier" class="btn" onClick="formModify('${item.value}', ${index}, ${item.priority})">Modifier</button>
+                <button class="btn" onClick="onClickDelete('${index}')">Supprimer</button>
             </div>
         `
     })
@@ -45,8 +45,8 @@ function onTaskSubmit() {
     var tache = document.getElementById('tache').value
     var num = document.getElementById('priority').value
     var choixListe = document.getElementById('liste-deroulante').value
-    console.log(choixListe)
-    objetTaches.push({value: tache, status: choixListe, priority: num})
+    console.log(num)
+    objetTaches.push({value: tache, status: choixListe, priority: Number(num)})
     affichertableau(objetTaches)
     afficherPriority(objetTaches)
 }
