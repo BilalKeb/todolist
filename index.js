@@ -27,11 +27,11 @@ function affichertableau(objet) {
         index = objet.indexOf(item)
         list_taches.innerHTML = list_taches.innerHTML + `
             <div class="task-element">
-                <button onClick="formModify('${item.value}', ${index}, ${item.priority})">Modifier</button>
                 <div id="${item.value}"> ${item.value}</div> 
                 <div class="status">${item.status}</div> 
                 <div class="priority"></div> 
-                <button onClick="onClickDelete('${index}')">Supprimer</button>
+                <button id="modifier" class="btn" onClick="formModify('${item.value}', ${index}, ${item.priority})">Modifier</button>
+                <button class="btn" onClick="onClickDelete('${index}')">Supprimer</button>
             </div>
         `
     })
@@ -45,8 +45,8 @@ function onTaskSubmit() {
     var tache = document.getElementById('tache').value
     var num = document.getElementById('priority').value
     var choixListe = document.getElementById('liste-deroulante').value
-    console.log(choixListe)
-    objetTaches.push({value: tache, status: choixListe, priority: num})
+    console.log(num)
+    objetTaches.push({value: tache, status: choixListe, priority: Number(num)})
     affichertableau(objetTaches)
     afficherPriority(objetTaches)
 }
@@ -66,9 +66,9 @@ function clearcontent(elementID) {
 //modifier
 function formModify(tache_a_modifier, index, num_prior) { //faire apparaître le champs de texte
     document.getElementById(tache_a_modifier).innerHTML = `
-            <input type="text" id="tacheModifier" value="${tache_a_modifier}" name=""> 
-            <input type="submit" value="valider" onclick="onModify(${index})" />
-        ` 
+            <input type="text" id="tacheModifier" value="${tache_a_modifier}" name="">
+            <input type="submit" value="valider" class="" onclick="onModify(${index})" />
+            ` 
     prior[index].innerHTML = `<input type="number" id="priorModifier" value="${num_prior}" min="0" max="5"> `
 }
 function onModify(index) { //modifier la valeur

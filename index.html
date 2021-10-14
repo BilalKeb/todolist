@@ -9,21 +9,21 @@
     <title>Todolist</title>
 </head>
 <body>
+    <div id="nom-tableau">
+        Todolist
+    </div>
     <div class="container">
-        <div id="nom-tableau">
-            Todolist
-        </div>
         <div id="formulaire">
-            <form class="formad"  onsubmit="onTaskSubmit(); return false;">    
+            <form class="format"  onsubmit="onTaskSubmit(); return false;">    
                 <input type="text" id="tache" name="" placeholder="Ajoutez votre tâche ici !">
                 <input type="number" id="priority" name="" min="0" max="5">
-                <button class="btn1">Submit</button>
                 <SELECT id="liste-deroulante" NAME="Liste" >
                     <OPTION VALUE="">Vide
                     <OPTION VALUE="To do">To do
                     <OPTION VALUE="Done">Done
                     <OPTION VALUE="Doing">Doing
                 </SELECT>
+                <button class="btnAjouter">Ajouter</button>
             </form>   
         </div>
         <div class="filtre">
