@@ -1,5 +1,5 @@
 var objetTaches = [
-    {value : "Apprendre le CSS Bilal.", 
+    {value : "Apprendre à Jong comment parler et se presenter lors d'un entretien .", 
     status: "To do",
     priority: 1},
     {value : "Empêcher Benoit de kicker tout le monde.", 
@@ -11,7 +11,7 @@ var objetTaches = [
     {value : "Venir à l'heure Rebecca.", 
     status: "To do",
     priority: 5},
-    {value : "Arrêter d'être BG Vincent.", 
+    {value : "Arrêter d'être BG Bilal.", 
     status: "Done",
     priority: 3}    
 ]
